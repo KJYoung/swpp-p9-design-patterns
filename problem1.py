@@ -3,7 +3,15 @@ class Shape:
     def create(name):
         # TODO: Fill the code here
         # NOTE: Raise `ValueError("Invalid name", name)` if there is no such shape.
-
+        # Factory.
+        if name == "circle":
+            return Circle()
+        elif name == "square":
+            return Square()
+        elif name == "line":
+            return Line()
+        else:
+            raise ValueError("Invalid name", name)
 
 class Circle(Shape):
     def draw(self):
